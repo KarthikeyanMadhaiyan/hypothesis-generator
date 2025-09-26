@@ -1,0 +1,17 @@
+{
+  "anomaly": {
+    "id": "A1",
+    "type": "latency_spike",
+    "timestamp": "2025-09-25T10:00:00Z",
+    "metadata": {
+      "region": "us-east-1",
+      "service": "auth-api",
+      "avg_latency": "800ms"
+    }
+  },
+  "candidates": [
+    {"id": "C1", "type": "deployment", "service": "auth-api", "time": "2025-09-25T09:50:00Z"},
+    {"id": "C2", "type": "db-connection", "service": "user-db", "status": "degraded"},
+    {"id": "C3", "type": "network-issue", "region": "us-east-1"}
+  ]
+}
