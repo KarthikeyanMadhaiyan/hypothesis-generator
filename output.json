@@ -1,0 +1,50 @@
+[
+    {
+        "id": "H1",
+        "hypothesis": "deployment may have caused latency_spike",
+        "confidence": 0.74,
+        "reasoning": {
+            "evidence": [
+                "Candidate type: deployment",
+                "Service: auth-api"
+            ],
+            "chain_of_thought": [
+                "Step 1: Match anomaly type with candidate metadata",
+                "Step 2: Assess similarity or correlation",
+                "Step 3: Assign confidence based on match strength"
+            ]
+        }
+    },
+    {
+        "id": "H2",
+        "hypothesis": "db-connection may have caused latency_spike",
+        "confidence": 0.74,
+        "reasoning": {
+            "evidence": [
+                "Candidate type: db-connection",
+                "Service: user-db"
+            ],
+            "chain_of_thought": [
+                "Step 1: Match anomaly type with candidate metadata",
+                "Step 2: Assess similarity or correlation",
+                "Step 3: Assign confidence based on match strength"
+            ]
+        }
+    },
+    {
+        "id": "H3",
+        "hypothesis": "network-issue may have caused latency_spike",
+        "confidence": 0.73,
+        "reasoning": {
+            "evidence": [
+                "Candidate type: network-issue",
+                "Service: N/A"
+            ],
+            "chain_of_thought": [
+                "Step 1: Match anomaly type with candidate metadata",
+                "Step 2: Assess similarity or correlation",
+                "Step 3: Assign confidence based on match strength"
+            ]
+        }
+    }
+]

@@ -1,0 +1,60 @@
+{
+  "anomaly": {
+    "id": "A1",
+    "type": "latency_spike",
+    "timestamp": "2025-09-25T10:00:00Z",
+    "metadata": {
+      "region": "us-east-1",
+      "service": "auth-api",
+      "avg_latency": "800ms",
+      "baseline_latency": "120ms",
+      "affected_endpoints": ["/login", "/verify", "/refresh"],
+      "error_rate": "2.3%",
+      "request_volume": 1500
+    }
+  },
+  "candidates": [
+    {
+      "id": "C1", 
+      "type": "deployment", 
+      "service": "auth-api", 
+      "timestamp": "2025-09-25T09:50:00Z",
+      "version": "v2.1.4",
+      "region": "us-east-1",
+      "status": "completed"
+    },
+    {
+      "id": "C2", 
+      "type": "db-connection", 
+      "service": "user-db", 
+      "timestamp": "2025-09-25T09:55:00Z",
+      "status": "degraded",
+      "region": "us-east-1",
+      "connection_pool": "80% utilization"
+    },
+    {
+      "id": "C3", 
+      "type": "network-issue", 
+      "region": "us-east-1",
+      "timestamp": "2025-09-25T09:58:00Z",
+      "affected_azs": ["us-east-1a", "us-east-1b"],
+      "packet_loss": "0.5%"
+    },
+    {
+      "id": "C4",
+      "type": "load-balancer",
+      "service": "auth-lb",
+      "timestamp": "2025-09-25T09:45:00Z",
+      "region": "us-east-1",
+      "health_check_failures": 3
+    },
+    {
+      "id": "C5",
+      "type": "external-api",
+      "service": "oauth-provider",
+      "timestamp": "2025-09-25T10:02:00Z",
+      "response_time": "5000ms",
+      "region": "external"
+    }
+  ]
+}
